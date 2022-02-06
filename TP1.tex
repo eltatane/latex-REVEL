@@ -17,7 +17,10 @@
 \maketitle
 \par\noindent\rule{\textwidth}{0.4pt}
 
+ %----------------------------------------DEBUT TD1------------------------------------------
+ 
 \section{\huge{efficatité de l'environnemnt de travail}}
+
 %----------------------------------------Question 1-----------------------------------------------------
 \subsection{\large{Desactivation de la souris}}
 
@@ -172,5 +175,37 @@ C'est un terminal beaucoup plus avancé que les autres, on peut le customiser co
  
  %----------------------------------------FIN TD1------------------------------------------
  
+ \newpage
  
+ %----------------------------------------DEBUT TD2------------------------------------------
+ 
+ \section{\huge{SSH}}
+ 
+ %---------------------------------------------Question 1------------------------------------------------
+ 
+ \subsection{\large{Premiere connection en SSH}}
+ Pour se connecter en ssh a srv on entre cette commande: \par sudo ssh carol@10.0.0.3 \par
+ on est bien en ssh sur cette machine car ce n'est pas mon ip qui est affiché
+ 
+ \begin{center}
+        \includegraphics[scale=0.47]{Images/ssh.png}
+ \end{center}
+ 
+ %---------------------------------------------Question 1------------------------------------------------
+ 
+ %---------------------------------------------Question 2------------------------------------------------
+ 
+ \subsection{\large{Public key}}
+ 
+ ssh-keygen -b 4096 va nous creer un cle, on lui indique que l'on veut la stocker dans un fichier specifique, dans mon cas le fichier id\_rsa.\par 
+ Cette cle une fois crée on la transfert a la machine de destination scp\par
+ .ssh/id\_rsa.pub bob@10.0.0.3:./clepub.txt
+ il ne reste plus qu'a copié cette cle dans le fichier .ssh/authorized\_keys \par
+  cat clepub.txt $>$ .ssh/authorized\_keys
+ \\\par
+ Une passphrase c’est une phrase qui est demandé lors de notre connection en ssh, elle permet de proteger la clé publique
+
+ %---------------------------------------------Question 2------------------------------------------------
+ 
+ %---------------------------------------------Question 3------------------------------------------------
 \end{document}
