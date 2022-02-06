@@ -55,7 +55,38 @@
 \begin{center}
     \includegraphics[scale=0.7]{Images/fastfinger.png}
 \end{center}
+%---------------------------------------------------------------------------------------------
 
 %---------------------------------------------Question 3------------------------------------------------
+\subsection{\large{Tutoriel pour VIM}}
 
+\begin{center}
+   \begin{tabular}{| l | c | }
+     \hline
+     insertion & i\\ \hline
+     enregister & :w\\ \hline
+     quitter & :q \\ \hline
+     aller au debut du fichier & :1 \\ \hline
+     aller a la fin du fichier & :\textdollar \\ \hline
+     annuler une action & u \\ \hline
+     recherche d'une occurence & /occurence \\ \hline
+     activer coloration syntaxique & :syntax on \\ \hline
+     templacer du texte & :s/origin/replacement/g \\ \hline
+   \end{tabular}
+ \end{center}
+ 
+ pour definir VIM comme editeur par defaut on a juste a rentrer cette commande: \par update-alternatives --set editor /bin/vim
+ %---------------------------------------------------------------------------------------------
+ 
+ %---------------------------------------------Question 4------------------------------------------------
+ \subsection{\large{Bash history}}
+ Mon mot de passe n'apparait pas dans le bash history, donc il n'y a pas d'informations sensible.\par
+ Les historiques sont propres a chaque shell utilisé. \\
+ 
+ Pour eviter de poluer notre historique avec des commande basique on peut les exclures avec cette commande : \par
+ export HISTIGNORE="ls : cd : pwd"
+ 
+  %---------------------------------------------------------------------------------------------
+ 
+ 
 \end{document}
