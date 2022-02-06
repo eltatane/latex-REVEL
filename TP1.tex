@@ -208,4 +208,43 @@ C'est un terminal beaucoup plus avancé que les autres, on peut le customiser co
  %---------------------------------------------Question 2------------------------------------------------
  
  %---------------------------------------------Question 3------------------------------------------------
+ 
+ \subsection{\large{Know host}}
+ 
+ Pour ajouter la clé publique au fichier know host au fichier,il faut taper cette commande: \par
+ ssh-keyscan -H 10.0.0.3 $>$ .ssh/known\_hosts
+ \\\par
+ L'alias de commande pour se connecter a bob avec bs, on configure ca dans le fichier config de ssh
+ 
+ \begin{center}
+        \includegraphics[scale=0.47]{Images/bs.png}
+ \end{center}
+ 
+ \begin{center}
+        \includegraphics[scale=0.47]{Images/bsresult.png}
+ \end{center}
+ 
+ %---------------------------------------------Question 3------------------------------------------------
+ 
+ %---------------------------------------------Question 4------------------------------------------------
+ 
+ \subsection{\large{SFTP}}
+ Pour se connecter en sftp a alice c'est la meme syntaxe que ssh mais juste sftp a la place. Il ne reste plus q'ua taper les commande pour transferer des fichier.
+ 
+ \begin{center}
+        \includegraphics[scale=0.47]{Images/sftp.png}
+ \end{center}
+ 
+ on voit bien que les fichier on été transferé
+ 
+  \begin{center}
+        \includegraphics[scale=0.47]{Images/sftpresult.png}
+ \end{center}
+ 
+ %---------------------------------------------Question 4------------------------------------------------
+ 
+  \newpage
+ 
+  %---------------------------------------------Question 5------------------------------------------------
+ 
 \end{document}
