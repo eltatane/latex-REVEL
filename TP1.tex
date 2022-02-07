@@ -228,23 +228,99 @@ C'est un terminal beaucoup plus avancé que les autres, on peut le customiser co
  
  %---------------------------------------------Question 4------------------------------------------------
  
- \subsection{\large{SFTP}}
+ \subsection{\large{SFTP / SSHFS}}
+ 
+ \subsection*{\normalsize{SFTP} } 
+ 
  Pour se connecter en sftp a alice c'est la meme syntaxe que ssh mais juste sftp a la place. Il ne reste plus q'ua taper les commande pour transferer des fichier.
  
  \begin{center}
         \includegraphics[scale=0.47]{Images/sftp.png}
  \end{center}
  
+  \newpage
+  
  on voit bien que les fichier on été transferé
  
+ \begin{center}
+        \includegraphics[scale=0.5]{Images/sftpresult.png}
+ \end{center}
+ 
+ \subsection*{\normalsize{SSHFS} } 
+ 
+ \begin{center}
+        \includegraphics[scale=0.5]{Images/sshfs.png}
+ \end{center}
+ 
+ nano /tmp/alicesrv/README.md \par
+ j’ai effacé le contenu et mis test a la place
+ 
+ 
   \begin{center}
-        \includegraphics[scale=0.47]{Images/sftpresult.png}
+        \includegraphics[scale=0.5]{Images/sshfsresult.png}
  \end{center}
  
  %---------------------------------------------Question 4------------------------------------------------
  
-  \newpage
+ %---------------------------------------------Question 5------------------------------------------------
  
-  %---------------------------------------------Question 5------------------------------------------------
+ \subsection{\large{Tunnel SSH}}
+ 
+ %---------------------------------------------Question 5------------------------------------------------
+ 
+ %---------------------------------------------Question 6------------------------------------------------
+ 
+ \subsection{\large{Tunnel SSH TSOCKS}}
+ 
+ %---------------------------------------------Question 6------------------------------------------------
+ 
+ %---------------------------------------------Question 7------------------------------------------------
+ 
+ \subsection{\large{X11 Forwarding}}
+ 
+ Sur la machine cible on installe x11-apps, ensuite on s'y connecte en ssh avec l'option -x pour le forwarding x11.
+ 
+  \begin{center}
+        \includegraphics[scale=0.5]{Images/x11.png}
+ \end{center}
+ 
+ l'aplication se lance bien sur la cible et s'affiche sur notre poste
+ 
+  \begin{center}
+        \includegraphics[scale=0.5]{Images/x11result.png}
+ \end{center}
+ 
+  %---------------------------------------------Question 7------------------------------------------------
+  
+  %---------------------------------------------Question 8------------------------------------------------
+  
+  \subsection{\large{Proxyjump}}
+  
+  Il faut ajouter dans le fichier config de ssh
+  
+  \begin{center}
+        \includegraphics[scale=0.5]{Images/proxyjump.png}
+ \end{center}
+ 
+ avec cette methode on ne laise pas de trace sur les machines et c'est plus securisé
+ 
+ %---------------------------------------------Question 8------------------------------------------------
+ 
+ %---------------------------------------------Question 9------------------------------------------------
+  
+  \subsection{\large{Proxycommand}}
+  
+  Il faut ajouter dans le fichier config de ssh
+  
+  \begin{center}
+        \includegraphics[scale=0.5]{Images/proxycommand.png}
+ \end{center}
+ 
+ Cette methode est moins securisé et laisse des traces sur la machine intermediaire 
+  
+ %---------------------------------------------Question 9------------------------------------------------
+ 
+ %---------------------------------------------FIN SSH---------------------------------------------------
+ 
  
 \end{document}
