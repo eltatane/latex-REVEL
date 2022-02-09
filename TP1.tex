@@ -344,9 +344,133 @@ C'est un terminal beaucoup plus avancé que les autres, on peut le customiser co
   
  %---------------------------------------------Question 9------------------------------------------------
  
- \newpage
- 
  %---------------------------------------------FIN SSH---------------------------------------------------
+  
+  \newpage
+  
+ %---------------------------------------------DEBUT GIT---------------------------------------------------
  
+ \section{\huge{GIT}}
+ 
+ %---------------------------------------------question 1---------------------------------------------------
+ 
+ \subsection{\large{Premier pas git}}
+ 
+ on fait un git init
+ 
+ \begin{center}
+        \includegraphics[scale=0.5]{Images/gitinit.png}
+ \end{center}
+ 
+ apres avoir copié le vagrant, lors du git status on voit les fichier non enregistré
+ 
+ \begin{center}
+        \includegraphics[scale=0.5]{Images/gitadd.png}
+ \end{center}
+ 
+ apres un up un fichier .vagrant apparait
+ 
+ \begin{center}
+        \includegraphics[scale=0.5]{Images/vgup.png}
+ \end{center}
+ 
+ pour eviter ca on ajoute ce fichier dans un gitignore \par
+ 
+ ensuite on fait un git add . \par
+ 
+ puis un git commit -m "test commit"
+ 
+ \begin{center}
+        \includegraphics[scale=0.5]{Images/gitcommit.png}
+ \end{center}
+ 
+ on peut voir dans les log que ce'st bien pris en compte
+ 
+ \begin{center}
+        \includegraphics[scale=0.5]{Images/gitlog.png}
+ \end{center}
+ 
+ %---------------------------------------------question 1---------------------------------------------------
+ 
+ %---------------------------------------------question 2---------------------------------------------------
+ 
+ \subsection{\large{git branche}}
+ 
+ Pour creer une nouvelle branche on entre ca : git checkout -b nouvelle-branche-test
+ 
+ \begin{center}
+        \includegraphics[scale=0.5]{Images/addp.png}
+ \end{center}
+ 
+ \begin{center}
+        \includegraphics[scale=0.5]{Images/commitbranch.png}
+ \end{center}
+ 
+ on retourne sur le master et on voit que rien n'a bougé
+ 
+ \begin{center}
+        \includegraphics[scale=0.5]{Images/gitcheckout.png}
+ \end{center}
+ 
+ pour mettre les modifs sur le main on a juste a faire git merge nouvelle-branche-test \par
+ 
+ Dans le git log on voit bien les modif, il reste plus qu'a supprimé la branche
+ 
+ \begin{center}
+        \includegraphics[scale=0.5]{Images/gitd.png}
+ \end{center}
+ 
+ 
+ %---------------------------------------------question 2---------------------------------------------------
+ 
+ %---------------------------------------------question 3---------------------------------------------------
+ 
+ \subsection{\large{git conflit}}
+ 
+ Sur la nouvelle branche on met le port 8081 dans le Vagrantfile
+ 
+ \begin{center}
+        \includegraphics[scale=0.5]{Images/8081.png}
+ \end{center}
+ 
+ Et sur le main on met le port 8080
+ 
+ \begin{center}
+        \includegraphics[scale=0.5]{Images/8080.png}
+ \end{center}
+ 
+ on merge les 2 branches et comme prevu il y a un conflit
+ 
+ \begin{center}
+        \includegraphics[scale=0.5]{Images/merge.png}
+ \end{center}
+ 
+ git nous montre les lignes de conflit, on a juste a supprimer une des 2
+ 
+ \begin{center}
+        \includegraphics[scale=0.5]{Images/conflit.png}
+ \end{center}
+ 
+ on fait un git add Vagrantfile puis un git merge -continue
+ 
+ %---------------------------------------------question 3---------------------------------------------------
+ 
+ %---------------------------------------------question 4---------------------------------------------------
+ 
+ \subsection{\large{git SSH}}
+ 
+ on genere une nouvelle cle ssh sur notre pc avec ssh-keygen \par
+ 
+ apres sur github on va dans les setting dans la categorie SSH et on y ajoute notre clé
+ 
+ \begin{center}
+        \includegraphics[scale=0.5]{Images/sshgit.png}
+ \end{center}
+ 
+ %---------------------------------------------question 4---------------------------------------------------
+ 
+ %---------------------------------------------FIN GIT---------------------------------------------------
+ 
+ %---------------------------------------------FIN DOC---------------------------------------------------
  
 \end{document}
