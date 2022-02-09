@@ -226,6 +226,8 @@ C'est un terminal beaucoup plus avancé que les autres, on peut le customiser co
  
  %---------------------------------------------Question 3------------------------------------------------
  
+ \newpage
+ 
  %---------------------------------------------Question 4------------------------------------------------
  
  \subsection{\large{SFTP / SSHFS}}
@@ -237,8 +239,6 @@ C'est un terminal beaucoup plus avancé que les autres, on peut le customiser co
  \begin{center}
         \includegraphics[scale=0.47]{Images/sftp.png}
  \end{center}
- 
-  \newpage
   
  on voit bien que les fichier on été transferé
  
@@ -266,13 +266,37 @@ C'est un terminal beaucoup plus avancé que les autres, on peut le customiser co
  
  \subsection{\large{Tunnel SSH}}
  
+ Pour se connecter au serveur en passant par cli il faut entrer cette commande, et ne pas quitter le terminal pour \par ne pas fermer la connection. \par
+ 
+ La commande est celle la : ssh -L 8000:10.0.0.3:80 alice@10.0.0.2
+ 
+ ensuite on essaie de voir si on arrive a recuperer un fichier sur le serveur
+ 
+ \begin{center}
+        \includegraphics[scale=0.5]{Images/curl.png}
+ \end{center}
+ 
+ Si on coupe le tunnel le curl va echouer
+ 
+ \begin{center}
+        \includegraphics[scale=0.5]{Images/curlfail.png}
+ \end{center}
+ 
  %---------------------------------------------Question 5------------------------------------------------
  
  %---------------------------------------------Question 6------------------------------------------------
  
  \subsection{\large{Tunnel SSH TSOCKS}}
  
+ On fait la meme commande qui pour le tunnel ssh mais en changeant de port ssh -L 9000:10.0.0.3:80 alice@10.0.0.2 \par
+ 
+ Sur la machine intermediaire on ouvre le port 9000 : ssh -D 9000 alice@cli.local \par
+ 
+ Pour permetre un SOCKS Proxy sur srv on fait ca : tsocks firefox \par
+ 
  %---------------------------------------------Question 6------------------------------------------------
+ 
+ \newpage
  
  %---------------------------------------------Question 7------------------------------------------------
  
@@ -280,13 +304,13 @@ C'est un terminal beaucoup plus avancé que les autres, on peut le customiser co
  
  Sur la machine cible on installe x11-apps, ensuite on s'y connecte en ssh avec l'option -x pour le forwarding x11.
  
-  \begin{center}
+ \begin{center}
         \includegraphics[scale=0.5]{Images/x11.png}
  \end{center}
  
  l'aplication se lance bien sur la cible et s'affiche sur notre poste
  
-  \begin{center}
+ \begin{center}
         \includegraphics[scale=0.5]{Images/x11result.png}
  \end{center}
  
@@ -298,7 +322,7 @@ C'est un terminal beaucoup plus avancé que les autres, on peut le customiser co
   
   Il faut ajouter dans le fichier config de ssh
   
-  \begin{center}
+ \begin{center}
         \includegraphics[scale=0.5]{Images/proxyjump.png}
  \end{center}
  
@@ -308,17 +332,19 @@ C'est un terminal beaucoup plus avancé que les autres, on peut le customiser co
  
  %---------------------------------------------Question 9------------------------------------------------
   
-  \subsection{\large{Proxycommand}}
+ \subsection{\large{Proxycommand}}
   
   Il faut ajouter dans le fichier config de ssh
   
-  \begin{center}
+ \begin{center}
         \includegraphics[scale=0.5]{Images/proxycommand.png}
  \end{center}
  
  Cette methode est moins securisé et laisse des traces sur la machine intermediaire 
   
  %---------------------------------------------Question 9------------------------------------------------
+ 
+ \newpage
  
  %---------------------------------------------FIN SSH---------------------------------------------------
  
