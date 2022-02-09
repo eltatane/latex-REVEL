@@ -344,9 +344,99 @@ C'est un terminal beaucoup plus avancé que les autres, on peut le customiser co
   
  %---------------------------------------------Question 9------------------------------------------------
  
- \newpage
- 
  %---------------------------------------------FIN SSH---------------------------------------------------
+  
+  \newpage
+  
+ %---------------------------------------------DEBUT GIT---------------------------------------------------
  
+ \section{\huge{GIT}}
+ 
+ %---------------------------------------------question 1---------------------------------------------------
+ 
+ \subsection{\large{Premier pas git}}
+ 
+ on fait un git init
+ 
+ \begin{center}
+        \includegraphics[scale=0.5]{Images/gitinit.png}
+ \end{center}
+ 
+ apres avoir copié le vagrant, lors du git status on voit les fichier non enregistré
+ 
+ \begin{center}
+        \includegraphics[scale=0.5]{Images/gitadd.png}
+ \end{center}
+ 
+ apres un up un fichier .vagrant apparait
+ 
+ \begin{center}
+        \includegraphics[scale=0.5]{Images/vgup.png}
+ \end{center}
+ 
+ pour eviter ca on ajoute ce fichier dans un gitignore \par
+ 
+ ensuite on fait un git add . \par
+ 
+ puis un git commit -m "test commit"
+ 
+ \begin{center}
+        \includegraphics[scale=0.5]{Images/gitcommit.png}
+ \end{center}
+ 
+ on peut voir dans les log que ce'st bien pris en compte
+ 
+ \begin{center}
+        \includegraphics[scale=0.5]{Images/gitlog.png}
+ \end{center}
+ 
+ %---------------------------------------------question 1---------------------------------------------------
+ 
+ %---------------------------------------------question 2---------------------------------------------------
+ 
+ \subsection{\large{git branche}}
+ 
+ Pour creer une nouvelle branche on entre ca : git checkout -b nouvelle-branche-test
+ 
+ \begin{center}
+        \includegraphics[scale=0.5]{Images/addp.png}
+ \end{center}
+ 
+ \begin{center}
+        \includegraphics[scale=0.5]{Images/commitbranch.png}
+ \end{center}
+ 
+ on retourne sur le master et on voit que rien n'a bougé
+ 
+ \begin{center}
+        \includegraphics[scale=0.5]{Images/gitcheckout.png}
+ \end{center}
+ 
+ pour mettre les modifs sur le main on a juste a faire git merge nouvelle-branche-test \par
+ 
+ Dans le git log on voit bien les modif, il reste plus qu'a supprimé la branche
+ 
+ \begin{center}
+        \includegraphics[scale=0.5]{Images/gitd.png}
+ \end{center}
+ 
+ 
+ %---------------------------------------------question 2---------------------------------------------------
+ 
+ %---------------------------------------------question 3---------------------------------------------------
+ 
+ \subsection{\large{git conflit}}
+ 
+ Sur la nouvelle branche on met le port 8081 dans le Vagrantfile
+ 
+ \begin{center}
+        \includegraphics[scale=0.5]{Images/8081.png}
+ \end{center}
+ 
+ Et sur le main on met le port 8080
+ 
+ \begin{center}
+        \includegraphics[scale=0.5]{Images/8080.png}
+ \end{center}
  
 \end{document}
